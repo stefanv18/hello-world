@@ -1,0 +1,58 @@
+// Method 1: Reversing a string using a function + For Loop (JS)
+function reverseString(str) {
+    
+// Creating a new string to pass user input
+    let newString = "";
+// Creating a starting point, condition to be met, and incremental value
+    for (let i=str.length-1; i>=0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+// A new variable to prompt the user input
+const string = prompt("Please enter a string. Then hit the enter key: ");
+// A new variable to allow the user prompt string into the function
+const result = reverseString(string)
+// This will print the reverse string of the user input
+console.log(result)
+
+
+// Method 2: Reversing a string using the in-built features of JS
+const str1 = "olleH"
+// using split, reverse, and join method
+const newStr1 = str1.split("");
+// this will print the reverse of the input value
+console.log(newStr1.reverse().join(""));
+
+
+
+
+// Find the position of spaces in the string
+let name = "Hello, my name is Stefan."
+console.log(name.indexOf("my"));
+// Find the # of values in the array
+let values = ["hello", 10, 20, 30, "end"]
+console.log(values.length)
+
+
+
+
+// A simple pogram to check if the input string is a palindrome or not
+function checkPalindrome(string1) {
+// Creating the input string into an array
+    const arrayVal = string1.split("");
+// Reverses the values in the array
+    const reverseArrayVal = arrayVal.reverse();
+// Converts array back to string and appends elements
+    const reverseString1 = reverseArrayVal.join("");
+
+    if (string1 == reverseString1) {
+        console.log("It's a palindrome");
+    }
+    else {
+        console.log("it's not a palindrome");
+    }
+}
+// Creates user prompt for palindrome check
+const string1 = prompt("Please enter a string: ");
+checkPalindrome(string1);
